@@ -56,4 +56,10 @@ Due to the large size of the Llama 3.2-1B model, we loaded it locally but couldn
 #### Farming Recommendation Page With Input
 ![Farming Recommendation Page With Input](https://github.com/sreedevnair/Harvesting-AI-MumbaiHacks-Hackathon/blob/main/Output-Images/Farming-Recommendation-Page.png?raw=true)
 
+<br>
+
+### Farming Recommendation Output Page
+![Farming Recommendation Page](https://github.com/sreedevnair/Harvesting-AI-MumbaiHacks-Hackathon/blob/main/Output-Images/Farming-Recommendation-Output.png?raw=true)
+
+
 

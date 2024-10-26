@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .form-container:hover {
+            transform: scale(1.02);
+        }
+
+        .form-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            border-color: #ddd;
+        }
+
+        .submit-btn {
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #357ab3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Sustainable Farming Recommendations</h2>
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="mb-4">
+                <label for="crop" class="form-label">Crop Type</label>
+                <input type="text" class="form-control" id="crop" name="crop" placeholder="Enter crop type (e.g., wheat)" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="soil_type" class="form-label">Soil Type</label>
+                <input type="text" class="form-control" id="soil_type" name="soil_type" placeholder="Enter soil type (e.g., loam)" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Enter location (e.g., Delhi)" required>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Get Recommendations</button>
+            <br> <br>
+            <a href="{% url 'index' %}"><button type="button" class="btn submit-btn">Back to Home</button></a>
+        </form>
+    </div>
+</body>
+</html>

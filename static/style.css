@@ -1,0 +1,61 @@
+/* Navbar */
+.navbar {
+  background: #007b5e;
+  color: #ffffff;
+  padding: 15px 0;
+}
+.nav-links li {
+  display: inline;
+  margin: 0 10px;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #00a86b, #007b5e);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* About Us */
+.about-section {
+  padding: 40px 20px;
+  background: #f8f9fa;
+  color: #555555;
+}
+
+/* Features Section */
+.features-section {
+  padding: 40px 20px;
+}
+.form-control {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+.btn {
+  background-color: #007b5e;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #f1f1f1;
+  color: #555;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+/* Soil Analysis Section */
+.soil-analysis-section {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}

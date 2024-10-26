@@ -1,0 +1,167 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvesting AI - Home</title>
+    <link rel="stylesheet" href='{% static "style.css" %}'>
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static '/img/soilimahe.jpg' %}"); /* Replace with your grass background image */
+            background-size: cover;
+            background-position: center;
+            color: #333; /* Dark color for text */
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 100, 0, 0.8); /* Dark green navbar */
+            padding: 10px 20px;
+        }
+        .navbar-brand {
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ffc107; /* Gold hover effect */
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: rgba(0, 128, 0, 0.6); /* Semi-transparent dark green */
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            background: rgba(139, 69, 19, 0.6); /* Semi-transparent brown color */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        h3 {
+            color: #ffc107; /* Highlighted header color */
+            opacity: 0.8; /* Transparent title */
+        }
+
+        /* About Us Section Styles */
+        .about-section {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .about-image {
+            max-width: 100%; /* Responsive image */
+            height: center;
+            margin-bottom: 20px; /* Space below image */
+            border-radius: 8px; /* Optional rounded corners */
+        }
+
+        /* Soil Analysis Section Styles */
+        .soil-analysis-section {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .soil-analysis-image {
+            max-width: 100%; /* Responsive image */
+            height: auto;
+            margin-bottom: 20px; /* Space below image */
+            border-radius: 8px; /* Optional rounded corners */
+        }
+
+        /* Features Section Text Color */
+        .features-section p,
+        .features-section ul {
+            color: #ffffff; /* White color for text in features section */
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(0, 100, 0, 0.8); /* Dark green footer */
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <header class="navbar">
+       <div class="container">
+           <h1 class="navbar-brand">Harvesting AI</h1>
+           <nav>
+               <ul class="nav-links">
+                   <li><a href="#home">Home</a></li>
+                   <li><a href="#soil-analysis">farming recommendations</a></li>
+                   <li><a href="#about">About Us</a></li>
+                   <li><a href="#features">Features</a></li>
+               </ul>
+           </nav>
+       </div>
+   </header>
+
+   <!-- Hero Section -->
+   <section id="home" class="hero">
+       <div class="container text-center">
+           <h2>Welcome to Harvesting AI</h2>
+           <p>Empowering sustainable agriculture with AI-driven insights</p>
+       </div>
+   </section>
+
+   <!-- Soil Analysis Section -->
+   <section id="soil-analysis" class="soil-analysis-section">
+       <div class="container">
+        <a href="{% url 'farming_form' %}"><img src="{% static 'img/soil-analysis.jpg' %}" alt="Soil Analysis" class="soil-analysis-image"></a>
+           <h3><a href="{% url 'farming_form' %}">Farming Recommendations</a></h3>
+           <p>Our farming recommendation tool helps you with Llama's advise on how to grow your crop based on your soil type, location and the wheather of the current location like temperature, humidity and current wheather.</p>
+       </div>
+   </section>
+
+   <!-- About Us Section -->
+   <section id="about" class="about-section">
+       <div class="container">
+           <img src="{% static 'img/about-us.jpg' %}" alt="About Us" class="about">
+           <h3>About Us</h3>
+           <p>Harvesting AI is dedicated to revolutionizing agriculture through artificial intelligence. Our goal is to provide farmers with smart tools and insights, helping to maximize crop yield, manage soil health, and ensure sustainable farming practices.</p>
+       </div>
+   </section>
+
+   <!-- Features Section with Instructions Only -->
+   <section id="features" class="features-section">
+       <div class="container">
+           <h3>Features</h3>
+           <p>Our AI-powered tool provides detailed soil analysis and crop recommendations to support sustainable farming practices. Here’s how to get started:</p>
+           <ul>
+               <li><strong>Step 1:</strong> Enter the crop type (e.g., wheat, strawberry, etc)</li>
+               <li><strong>Step 2:</strong> Provide the soil type (e.g., loam, clay, etc )</li>
+               <li><strong>Step 3:</strong> Enter your farming locations</li>
+               <li><strong>Step 4:</strong> Follow the recommendations provided to improve soil quality and optimize crop yield.</li>
+           </ul>
+           <p>With these insights, Harvesting AI enables farmers to make data-driven decisions to promote healthy and sustainable crop growth.</p>
+       </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="footer text-center">
+       <p>&copy; 2024 Harvesting AI. All rights reserved.</p>
+   </footer>
+</body>
+</html>
